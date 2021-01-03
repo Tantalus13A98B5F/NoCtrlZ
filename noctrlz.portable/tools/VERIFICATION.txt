@@ -1,0 +1,10 @@
+﻿VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Checksum for the following embedded file(s) can be verified by `Get-FileHash` in PowerShell.
+
+File:   tools/NoCtrlZ-Binaries.zip
+URL:    https://github.com/Tantalus13A98B5F/NoCtrlZ/releases/download/2020-12-30/NoCtrlZ-Binaries.zip
+SHA256: 841EB973443F65EBE432A2AD3ADE2003ED33DE21F7011FE5E50A7996DE5B46EB
