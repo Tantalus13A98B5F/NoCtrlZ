@@ -82,4 +82,4 @@ $ErrorActionPreference = 'Stop'; # stop on all errors
 #Uninstall-BinFile # Only needed if you used Install-BinFile - see https://chocolatey.org/docs/helpers-uninstall-bin-file
 ## Remove any shortcuts you added in the install script.
 $shortcutPath = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\NoCtrlZ.lnk"
-Remove-Item $shortcutPath
+Remove-Item $shortcutPath -ea ignore

@@ -113,7 +113,12 @@ Get-ChocolateyUnzip $fileLocation $toolsDir
 ## Add specific files as shortcuts to the desktop
 ## - https://chocolatey.org/docs/helpers-install-chocolatey-shortcut
 $shortcutPath = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\NoCtrlZ.lnk"
-$target = Join-Path $toolsDir "NoCtrlZ.exe"
+$osBitness = Get-ProcessorBits
+if ($osBitness -eq 64) {
+    $target = Join-Path $toolsDir "NoCtrlZ.exe"
+} else {
+    $target = Join-Path $toolsDir "NoCtrlZ-32.exe"
+}
 Install-ChocolateyShortcut -shortcutFilePath $shortcutPath -targetPath $target
 Invoke-Item $shortcutPath
 
